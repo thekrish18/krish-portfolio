@@ -1,9 +1,132 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krish Banjara | Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+}
+
+header h1{
+font-size:60px;
+}
+
+header p{
+font-size:22px;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:white;
+color:#2563eb;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+section{
+padding:80px 10%;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+margin-top:20px;
+}
+
+.skills{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.skill{
+background:#2563eb;
+padding:10px 20px;
+border-radius:20px;
+}
+
+footer{
+background:#111827;
+padding:20px;
+text-align:center;
+}
+</style>
+</head>
+
 <body>
+
+<header>
 <h1>Krish Banjara</h1>
-<img src="krish.jpg" width="200">
-<p>My Website is Working!</p>
+<p>Website Developer & Freelancer</p>
+<a href="#contact" class="btn">Hire Me</a>
+</header>
+
+<section>
+<h2>About Me</h2>
+<div class="card">
+<p>
+Hello! My name is Krish Banjara. I create modern websites,
+business websites, portfolio websites and landing pages.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Skills</h2>
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">Responsive Design</div>
+<div class="skill">Web Development</div>
+</div>
+</section>
+
+<section>
+<h2>Services</h2>
+<div class="card">
+<p>✔ Business Website</p>
+<p>✔ Portfolio Website</p>
+<p>✔ Landing Page</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+<p>📱 7340695561</p>
+<p>📧 krishbanjara2233@gmail.com</p>
+</div>
+</section>
+
+<footer>
+© 2026 Krish Banjara. All Rights Reserved.
+</footer>
+
 </body>
 </html>
