@@ -10,82 +10,67 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Segoe UI',sans-serif;
 scroll-behavior:smooth;
 }
-.social-btn{
-display:inline-flex;
-align-items:center;
-gap:10px;
-padding:12px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-color:white;
-background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
-}
 
-.social-btn img{
-width:25px;
-height:25px;
-}
 body{
 background:#0f172a;
 color:white;
-transition:0.5s;
-}
-
-.light{
-background:white;
-color:black;
-}
-
-.light .card{
-background:#f1f5f9;
-color:black;
 }
 
 header{
-background:linear-gradient(135deg,#2563eb,#06b6d4);
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:80px 20px;
+background:linear-gradient(135deg,#0f172a,#1e293b);
 }
 
 .profile{
 width:180px;
 height:180px;
 border-radius:50%;
+border:5px solid #38bdf8;
 object-fit:cover;
-border:5px solid white;
-box-shadow:0 0 25px rgba(255,255,255,0.6);
+box-shadow:0 0 30px #38bdf8;
 }
 
-header h1{
+h1{
+font-size:3rem;
 margin-top:20px;
-font-size:50px;
 }
 
-.typing{
-font-size:22px;
-overflow:hidden;
-white-space:nowrap;
-border-right:3px solid white;
-width:0;
-margin:auto;
-animation:typing 4s steps(30,end) forwards;
+.hero-text{
+font-size:1.2rem;
+margin-top:10px;
+color:#94a3b8;
 }
 
-@keyframes typing{
-from{width:0}
-to{width:100%}
+.btn{
+display:inline-block;
+padding:12px 25px;
+margin:10px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+background:#38bdf8;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 nav{
+position:sticky;
+top:0;
 background:#111827;
 padding:15px;
 text-align:center;
-position:sticky;
-top:0;
 }
 
 nav a{
@@ -96,77 +81,59 @@ font-weight:bold;
 }
 
 section{
-padding:60px 10%;
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:40px;
+font-size:2rem;
+color:#38bdf8;
 }
 
 .card{
 background:#1e293b;
 padding:25px;
 border-radius:15px;
-margin-top:20px;
-box-shadow:0 0 15px rgba(0,0,0,0.3);
+margin-bottom:20px;
+box-shadow:0 0 10px rgba(0,0,0,.3);
 }
 
 .skills{
 display:flex;
 flex-wrap:wrap;
 gap:10px;
-margin-top:15px;
 }
 
 .skill{
-background:#2563eb;
+background:#38bdf8;
 padding:10px 20px;
 border-radius:20px;
 }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-}
-
-#modeBtn{
-position:fixed;
-top:20px;
-right:20px;
-padding:10px 15px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-z-index:999;
-}
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-}
-
 footer{
-background:#111827;
 text-align:center;
 padding:20px;
+background:#111827;
+}
+
+.social{
+margin-top:20px;
+}
+
+.social a{
+margin:5px;
+}
+
+@media(max-width:768px){
+h1{
+font-size:2rem;
+}
 }
 </style>
 </head>
 
 <body>
-
-<button onclick="toggleMode()" id="modeBtn">
-🌙 Dark/Light
-</button>
 
 <header>
 
@@ -174,9 +141,14 @@ padding:20px;
 
 <h1>Krish Banjara</h1>
 
-<p class="typing">Website Developer & Freelancer</p>
+<p class="hero-text">
+Website Developer | Freelancer | Web Designer
+</p>
 
+<div>
 <a href="#contact" class="btn">Hire Me</a>
+<a href="resume.pdf" download class="btn">Download Resume</a>
+</div>
 
 </header>
 
@@ -189,50 +161,42 @@ padding:20px;
 </nav>
 
 <section id="about">
-<h2>About Me</h2>
+<h2 class="section-title">About Me</h2>
 
 <div class="card">
 <p>
-Hello! My name is Krish Banjara.
-I create modern Portfolio Websites,
-Business Websites and Landing Pages.
+Hello! I'm Krish Banjara.
+I create professional websites for businesses,
+shops, freelancers and creators.
 </p>
-
-<a href="resume.pdf" download class="btn">
-📄 Download Resume
-</a>
-
 </div>
+
 </section>
 
 <section id="skills">
-<h2>Skills</h2>
+
+<h2 class="section-title">Skills</h2>
 
 <div class="card">
 <div class="skills">
 <div class="skill">HTML</div>
 <div class="skill">CSS</div>
 <div class="skill">Responsive Design</div>
-<div class="skill">Website Development</div>
+<div class="skill">GitHub Pages</div>
+<div class="skill">Web Design</div>
 </div>
 </div>
 
 </section>
 
 <section id="services">
-<h2>Services</h2>
+
+<h2 class="section-title">Services</h2>
 
 <div class="card">
-<p>✔ Portfolio Website</p>
-<p>✔ Business Website</p>
-<p>✔ Landing Page</p>
-<p>✔ Website Redesign</p>
+<h3>Business Website</h3>
+<p>Professional website for local businesses.</p>
 </div>
-
-</section>
-
-<section id="projects">
-<h2>Projects</h2>
 
 <div class="card">
 <h3>Portfolio Website</h3>
@@ -240,70 +204,51 @@ Business Websites and Landing Pages.
 </div>
 
 <div class="card">
-<h3>Business Website</h3>
-<p>Professional website for local business.</p>
+<h3>Landing Page</h3>
+<p>High-converting landing pages.</p>
 </div>
 
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
 <div class="card">
-<h3>Landing Page</h3>
-<p>Marketing landing page design.</p>
+<h3>Krish Portfolio</h3>
+<p>Personal portfolio website built using HTML & CSS.</p>
 </div>
 
 </section>
 
 <section id="contact">
-<h2>Contact Me</h2>
+
+<h2 class="section-title">Contact Me</h2>
 
 <div class="card">
+
 <p>📱 Mobile: 7340695561</p>
 <p>📧 Email: krishbanjara2233@gmail.com</p>
 
+<div class="social">
+
 <a href="https://wa.me/917340695561" target="_blank" class="btn">
-WhatsApp Message
+WhatsApp
 </a>
 
-  <a href="https://www.instagram.com/thekrish.18/"
-target="_blank"
-class="social-btn">
-
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-alt="Instagram">
-
-Follow Me On Instagram
-
+<a href="https://www.instagram.com/thekrish.18/" target="_blank" class="btn">
+Instagram
 </a>
 
 </div>
+
+</div>
+
 </section>
 
 <footer>
 © 2026 Krish Banjara | All Rights Reserved
 </footer>
 
-<a href="https://wa.me/917340695561"
-target="_blank"
-class="whatsapp">
-WhatsApp
-<script>
-function toggleMode(){
-document.body.classList.toggle("light");
-}
-</script>
-
 </body>
-</html
-  <p>I Build Professional Websites For Businesses & Creators</p
-Business Website - ₹999
-Portfolio Website - ₹499
-Landing Page - ₹799
-<section id="projects">
-<h2>My Projects</h2>
-
-<div class="card">
-<h3>Krish Portfolio Website</h3>
-<p>Personal portfolio website built using HTML & CSS.</p>
-</div>
-
-</section>
-
-  
+</html>
