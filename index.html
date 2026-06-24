@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Krish Banjara | Portfolio</title>
+<title>Krish Banjara | Ultra Premium Portfolio</title>
 
 <style>
 *{
@@ -20,44 +20,51 @@ color:white;
 }
 
 header{
-height:100vh;
+min-height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(135deg,#0f172a,#1e293b);
+padding:20px;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#06b6d4);
 }
 
 .profile{
-width:180px;
-height:180px;
+width:200px;
+height:200px;
 border-radius:50%;
-border:5px solid #38bdf8;
 object-fit:cover;
-box-shadow:0 0 30px #38bdf8;
+border:5px solid white;
+box-shadow:0 0 40px #38bdf8;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
 }
 
 h1{
-font-size:3rem;
+font-size:55px;
 margin-top:20px;
 }
 
 .hero-text{
-font-size:1.2rem;
+font-size:22px;
 margin-top:10px;
-color:#94a3b8;
+color:#e2e8f0;
 }
 
 .btn{
 display:inline-block;
-padding:12px 25px;
 margin:10px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-color:white;
+padding:12px 25px;
 background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
 transition:.3s;
 }
 
@@ -71,6 +78,7 @@ top:0;
 background:#111827;
 padding:15px;
 text-align:center;
+z-index:999;
 }
 
 nav a{
@@ -86,8 +94,8 @@ padding:80px 10%;
 
 .section-title{
 text-align:center;
-margin-bottom:40px;
-font-size:2rem;
+font-size:35px;
+margin-bottom:30px;
 color:#38bdf8;
 }
 
@@ -96,7 +104,7 @@ background:#1e293b;
 padding:25px;
 border-radius:15px;
 margin-bottom:20px;
-box-shadow:0 0 10px rgba(0,0,0,.3);
+box-shadow:0 0 15px rgba(0,0,0,.3);
 }
 
 .skills{
@@ -106,28 +114,53 @@ gap:10px;
 }
 
 .skill{
-background:#38bdf8;
+background:#2563eb;
 padding:10px 20px;
 border-radius:20px;
 }
 
-footer{
-text-align:center;
-padding:20px;
-background:#111827;
+.bar{
+background:#334155;
+height:12px;
+border-radius:10px;
+overflow:hidden;
+margin-bottom:15px;
+}
+
+.fill{
+height:100%;
+background:#38bdf8;
 }
 
 .social{
+text-align:center;
 margin-top:20px;
 }
 
-.social a{
-margin:5px;
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 20px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+background:#111827;
+padding:20px;
+text-align:center;
 }
 
 @media(max-width:768px){
 h1{
-font-size:2rem;
+font-size:35px;
+}
+.hero-text{
+font-size:18px;
 }
 }
 </style>
@@ -142,13 +175,10 @@ font-size:2rem;
 <h1>Krish Banjara</h1>
 
 <p class="hero-text">
-Website Developer | Freelancer | Web Designer
+Website Developer • Freelancer • Web Designer
 </p>
 
-<div>
 <a href="#contact" class="btn">Hire Me</a>
-<a href="resume.pdf" download class="btn">Download Resume</a>
-</div>
 
 </header>
 
@@ -161,13 +191,14 @@ Website Developer | Freelancer | Web Designer
 </nav>
 
 <section id="about">
+
 <h2 class="section-title">About Me</h2>
 
 <div class="card">
 <p>
-Hello! I'm Krish Banjara.
-I create professional websites for businesses,
-shops, freelancers and creators.
+Hello! My name is Krish Banjara.
+I build professional portfolio websites,
+business websites and landing pages.
 </p>
 </div>
 
@@ -178,13 +209,19 @@ shops, freelancers and creators.
 <h2 class="section-title">Skills</h2>
 
 <div class="card">
-<div class="skills">
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">Responsive Design</div>
-<div class="skill">GitHub Pages</div>
-<div class="skill">Web Design</div>
-</div>
+
+<p>HTML</p>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+
+<p>CSS</p>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+
+<p>Responsive Design</p>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+
+<p>GitHub Pages</p>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+
 </div>
 
 </section>
@@ -195,17 +232,17 @@ shops, freelancers and creators.
 
 <div class="card">
 <h3>Business Website</h3>
-<p>Professional website for local businesses.</p>
+<p>Professional websites for shops and businesses.</p>
 </div>
 
 <div class="card">
 <h3>Portfolio Website</h3>
-<p>Modern personal portfolio website.</p>
+<p>Personal portfolio websites for students and freelancers.</p>
 </div>
 
 <div class="card">
 <h3>Landing Page</h3>
-<p>High-converting landing pages.</p>
+<p>Modern landing pages for promotions.</p>
 </div>
 
 </section>
@@ -215,8 +252,18 @@ shops, freelancers and creators.
 <h2 class="section-title">Projects</h2>
 
 <div class="card">
-<h3>Krish Portfolio</h3>
-<p>Personal portfolio website built using HTML & CSS.</p>
+<h3>Portfolio Website</h3>
+<p>Modern personal portfolio project.</p>
+</div>
+
+<div class="card">
+<h3>Business Website</h3>
+<p>Professional business website design.</p>
+</div>
+
+<div class="card">
+<h3>Landing Page</h3>
+<p>Marketing landing page project.</p>
 </div>
 
 </section>
@@ -249,6 +296,12 @@ Instagram
 <footer>
 © 2026 Krish Banjara | All Rights Reserved
 </footer>
+
+<a href="https://wa.me/917340695561"
+target="_blank"
+class="whatsapp">
+WhatsApp
+</a>
 
 </body>
 </html>
